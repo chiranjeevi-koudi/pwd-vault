@@ -1,0 +1,9 @@
+/* src/index.css */
+@import "tailwindcss";
+
+/* (Optional) Your tokens/customizations can live here in v4:
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-brand-500: #6366f1;
+}
+*/
