@@ -1,0 +1,378 @@
+
+/* General App background */
+body {
+  background-color: #28282B; /* Matte Black */
+}
+
+.mpin-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.mpin-form-card {
+  background: var(--secondary-bg);
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.mpin-form-card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.mpin-form-card input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.mpin-form-card input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.mpin-form-card button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.mpin-form-card button:hover {
+  background-color: #ffca28; /* A slightly lighter yellow for hover */
+}
+
+.mpin-form-card .error {
+  color: #d93025;
+  margin-top: 1rem;
+  text-align: center;
+  min-height: 1.2em; /* Reserve space for one line of text */
+}
+.mpin-input-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.mpin-box {
+  width: 40px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  /* For the "star" effect */
+  -webkit-text-security: disc;
+  text-security: disc;
+}
+
+.mpin-box:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.mpin-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem auto;
+  display: block;
+  border-radius: 50%;
+}
+/* New Layout Styles */
+:root {
+  --primary-bg: #1c1c1c;
+  --secondary-bg: #2a2a2a;
+  --text-color: #f1f1f1;
+  --text-secondary: #a9a9a9;
+  --accent-color: #ffc107;
+  --border-color: #444;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.layout {
+  display: flex;
+  flex-grow: 1;
+}
+
+/* TopNav Styles */
+.topnav {
+  background-color: var(--primary-bg);
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0; /* Prevent topnav from shrinking */
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger-btn svg {
+  stroke: var(--text-color);
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Allow content to scroll */
+}
+
+.content-area {
+  /* padding: 1rem; */ /* Removed to eliminate gap */
+}
+
+/* Remove TopNav Styles and absolute hamburger */
+
+/* SideNav Styles */
+.sidenav {
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: width 0.3s ease;
+  border-right: 1px solid var(--border-color);
+}
+
+.sidenav.expanded {
+  width: 200px;
+}
+
+.sidenav.collapsed {
+  width: 70px;
+}
+
+.sidenav .sidenav-header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.create-new-btn {
+  background-color: var(--accent-color);
+  color: #000;
+  border: none;
+  border-radius: 24px;
+  padding: 0.75rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sidenav.collapsed .create-new-btn .text {
+  display: none;
+}
+
+.sidenav nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidenav nav li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sidenav nav li:hover, .sidenav nav li.active {
+  background-color: var(--primary-bg);
+}
+
+.sidenav.collapsed nav li {
+  justify-content: center;
+}
+
+.sidenav .nav-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.sidenav.collapsed .text {
+  display: none;
+}
+
+.sidenav-footer {
+    margin-top: auto;
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+/* Password Form Styles */
+.password-form {
+  background-color: var(--secondary-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.password-form h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.password-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.password-form input,
+.password-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+.password-form button {
+  background-color: var(--accent-color);
+  color: #000;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* MPIN Input Fix */
+/* This duplicate rule is no longer needed */
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--secondary-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 2rem;
+  cursor: pointer;
+}
+/* .collapsed-hamburger style removed */
+/* Password Table Styles */
+.password-list-container {
+  background-color: var(--secondary-bg);
+  border-radius: 8px;
+}
+
+.password-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.password-table th,
+.password-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.password-table th {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.password-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.password-cell button, .actions-cell button {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.delete-btn {
+  color: #f44336 !important; /* Red for delete */
+}
